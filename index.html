@@ -7,16 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.getElementById("navToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  navToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("show");
-  });
-});
-</script>
   </head>
 <body>
 
@@ -375,3 +365,16 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>© 2025 Begalle Bro's Window Washing LLC — All Rights Reserved</p>
   </footer>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-links");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>

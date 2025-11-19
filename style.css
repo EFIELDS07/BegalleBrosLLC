@@ -542,6 +542,7 @@ a{ text-decoration: none; color: inherit; }
     padding: 60px 70px;
     color: var(--white);
     text-align: left;
+    background: var(--secondary);
 }
 .process-wrapper{ max-width: 880px; margin: 0 auto; padding: 0 100px; position: relative; z-index: 3; }
 .process-title{

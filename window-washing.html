@@ -371,3 +371,16 @@
   </footer>
 </section>
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-links");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>
