@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("navToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  navToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+  });
+});
+</script>
   </head>
 <body>
 
@@ -19,66 +29,71 @@
   <div class="nav-left">
     <img src="images/logo.PNG" class="nav-logo-img" alt="Begalle Bro's Logo">
     <span class="nav-company">Begalle Bro's LLC</span>
-    </div>
+  </div>
 
-  <!-- CENTER LINKS -->
-  <ul class="nav-links">
+  <!-- HAMBURGER (mobile only) -->
+  <div class="nav-hamburger" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- MENU (desktop + mobile dropdown) -->
+  <ul class="nav-menu" id="mobileMenu">
     <li><a href="index.html">Home</a></li>
     <li><a href="#about">About Us</a></li>
-
-    <!-- SERVICES DROPDOWN -->
-    <li class="dropdown">
-      <a href="#">Services ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="window-washing.html">Window Washing</a></li>
-        <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
-      </ul>
-    </li>
-
+    <li><a href="window-washing.html">Window Washing</a></li>
+    <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
     <li><a href="#contact-pro">Contact</a></li>
   </ul>
 
-  <!-- CTA PHONE BUTTON -->
+  <!-- CTA PHONE BUTTON (desktop only) -->
   <a href="tel:6514921449" class="nav-phone">Call Now</a>
 
-  <!-- MOBILE TOGGLE -->
-  <div class="nav-toggle" id="navToggle">☰</div>
 </nav>
+
 
 <!-- ==========================
      HERO SECTION
 ============================== -->
 <header id="hero">
+
+  <!-- Background slideshow -->
   <div class="hero-slideshow">
     <div class="slide active" style="background-image: url('images/home6.jpeg');"></div>
     <div class="slide" style="background-image: url('images/house1.webp');"></div>
     <div class="slide" style="background-image: url('images/gutter2.webp');"></div>
   </div>
 
+  <!-- Dark overlay -->
   <div class="hero-overlay"></div>
 
+  <!-- Content -->
   <div class="hero-content">
     <h1 class="hero-title">
-  Clear Glass<br>
-  Clear Gutters<br>
-  Clear Choice.
-</h1>
-    <p class="hero-subtitle">Residential & Commercial Exterior Cleaning Experts</p>
+      Clear Glass<br>
+      Clear Gutters<br>
+      Clear Choice.
+    </h1>
+
+    <p class="hero-subtitle">
+      Residential & Commercial Exterior Cleaning Experts
+    </p>
 
     <div class="hero-buttons">
       <a href="#contact-pro" class="hero-btn primary">Get a Free Quote</a>
       <a href="#services" class="hero-btn secondary">Our Services</a>
+    </div>
 
-      <div class="trust-badges">
+    <div class="trust-badges">
       <span class="badge">Insured</span>
       <span class="badge">Locally Owned</span>
       <span class="badge">5★ Service</span>
     </div>
   </div>
+
 </header>
-    </div>
-  </div>
-</header>
+
 <!-- ========================== SLOGAN BAR================ ======== -->
 <section id="slogan-bar" class="reveal">
   <div class="slogan-inner">

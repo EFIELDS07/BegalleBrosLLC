@@ -11,51 +11,62 @@
 
 <body>
 
-<!-- NAV -->
+<!-- ====================================
+     NAVIGATION BAR
+==================================== -->
 <nav class="navbar" id="navbar">
+
+  <!-- LEFT LOGO -->
   <div class="nav-left">
     <img src="images/logo.PNG" class="nav-logo-img" alt="Begalle Bro's Logo">
     <span class="nav-company">Begalle Bro's LLC</span>
   </div>
 
-  <ul class="nav-links">
+  <!-- HAMBURGER (mobile only) -->
+  <div class="nav-hamburger" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- MENU (desktop + mobile dropdown) -->
+  <ul class="nav-menu" id="mobileMenu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About Us</a></li>
-    <li class="dropdown">
-      <a href="#">Services ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="window-washing.html">Window Washing</a></li>
-        <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
-      </ul>
-    </li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="window-washing.html">Window Washing</a></li>
+    <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
     <li><a href="#contact-pro">Contact</a></li>
   </ul>
 
+  <!-- CTA PHONE BUTTON (desktop only) -->
   <a href="tel:6514921449" class="nav-phone">Call Now</a>
 
-  <div class="nav-toggle" id="navToggle">☰</div>
 </nav>
 
 <!-- HERO -->
 <header id="hero" class="ww-hero">
-  <div class="ww-hero-bg" style="background-image:url('images/gutter.jpeg')"></div>
-  <div class="ww-hero-shape"></div>
+ <div class="ww-hero-bg" style="background-image:url('images/gutter.jpeg')"></div>
+ <div class="ww-hero-shape"></div>
 
-  <div class="hero-content">
-    <h1 class="hero-title">Your Home Deserves Clear Gutters</h1>
-    <p class="hero-subtitle">Professional gutter cleaning & high-quality gutter guard installation.</p>
 
-    <div class="hero-buttons">
-      <a href="#contact-pro" class="hero-btn primary">Free Estimate</a>
-      <a href="tel:6514921449" class="hero-btn secondary">Call Now</a>
-    </div>
+ <div class="hero-content">
+   <h1 class="hero-title">Your Home Deserves <br>
+    Clear Gutters</h1>
+   <p class="hero-subtitle">Professional gutter cleaning & high-quality gutter guard installation.</p>
 
-    <div class="trust-badges">
-      <span class="badge">Insured</span>
-      <span class="badge">Locally Owned</span>
-      <span class="badge">5★ Service</span>
-    </div>
-  </div>
+
+   <div class="hero-buttons">
+     <a href="#contact-pro" class="hero-btn primary">Free Estimate</a>
+     <a href="tel:6514921449" class="hero-btn secondary">Call Now</a>
+   </div>
+
+
+   <div class="trust-badges">
+     <span class="badge">Insured</span>
+     <span class="badge">Locally Owned</span>
+     <span class="badge">5★ Service</span>
+   </div>
+ </div>
 </header>
 
 <!-- ========================== SLOGAN BAR================ ======== -->

@@ -344,4 +344,12 @@ if (contactInputs.length) {
         input.addEventListener('blur', () => { input.style.transform = "scale(1)"; });
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+});
 
