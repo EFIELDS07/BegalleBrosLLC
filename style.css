@@ -390,7 +390,6 @@ a{ text-decoration: none; color: inherit; }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 .section-bg::after{
     content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1;
