@@ -98,19 +98,17 @@ a{ text-decoration: none; color: inherit; }
 
 /* ========================= NAVBAR ========================= */
 .navbar{
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     padding: 18px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99999;
+    z-index: 9999;
     background: transparent;
     transition: 0.35s ease;
 }
-
 .navbar.scrolled{
     background: rgba(29,81,121,0.85);
     backdrop-filter: blur(6px);
