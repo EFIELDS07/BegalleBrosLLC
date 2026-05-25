@@ -1,9 +1,18 @@
 /* Begalle Bros — style.css (polished, responsive) */
 
 /* Global anti-aliasing (makes text look sharper & heavier) */
+
+body{
+  overflow-x: hidden;
+}
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Body typography */
@@ -14,6 +23,7 @@ body {
   letter-spacing: -0.01em;
   color: var(--text-strong);
 }
+
 
 /* Heading system — SAME as your window washing page */
 h1, h2, h3, h4, h5, h6 {
@@ -97,7 +107,94 @@ body{
 a{ text-decoration: none; color: inherit; }
 
 /* ========================= NAVBAR ========================= */
-.navbar{ position: sticky; top: 0; width: 100%; padding: 18px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 9999; background: transparent; transition: 0.35s ease; } .navbar.scrolled{ background: rgba(29,81,121,0.85); backdrop-filter: blur(6px); padding: 12px 40px; box-shadow: 0 6px 18px rgba(0,0,0,0.35); } /* LOGO + NAME */ .nav-left{ display: flex; align-items: center; gap: 14px; } .nav-logo-img{ width: 68px; height: 68px; border-radius: 50%; object-fit: cover; } .nav-company{ font-family: Impact, sans-serif; font-size: 2.0rem; background: linear-gradient(90deg,#8edaff,#ffffff,#b8eaff); -webkit-background-clip: text; color: transparent; } /* DESKTOP MENU */ .nav-menu{ display: flex; gap: 36px; list-style: none; } .nav-menu a{ color: white; font-size: 1.12rem; text-decoration: none; position: relative; } .nav-menu a::after{ content:""; position:absolute; left:0; bottom:-3px; width:0%; height:2px; background: var(--accent); transition:0.3s ease; } .nav-menu a:hover::after{ width:100%; } /* MOBILE HAMBURGER */ .nav-hamburger{ width:30px; display:none; flex-direction:column; gap:5px; cursor:pointer; } .nav-hamburger span{ height:3px; width:100%; background:white; border-radius:10px; }
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    background: transparent;
+    transition: 0.35s ease;
+}
+.navbar.scrolled{
+    background: rgba(29,81,121,0.85);
+    backdrop-filter: blur(6px);
+    padding: 12px 40px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* LOGO + NAME */
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.nav-logo-img{
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.nav-company{
+    font-family: Impact, sans-serif;
+    font-size: 2.0rem;
+    background: linear-gradient(90deg,#8edaff,#ffffff,#b8eaff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* DESKTOP MENU */
+.nav-menu{
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+.nav-menu a{
+    color: white;
+    font-size: 1.12rem;
+    text-decoration: none;
+    position: relative;
+}
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:0%;
+    height:2px;
+    background: var(--accent);
+    transition:0.3s ease;
+}
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+/* MOBILE HAMBURGER */
+.nav-hamburger{
+    width:30px;
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+.nav-hamburger span{
+    height:3px;
+    width:100%;
+    background:white;
+    border-radius:10px;
+}
+
+/* PHONE BUTTON */
+.nav-phone{
+    padding: 10px 20px;
+    background: var(--accent);
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+}
 
 /* ========================= MOBILE ========================= */
 @media(max-width:768px){
@@ -249,7 +346,9 @@ a{ text-decoration: none; color: inherit; }
 
 
 /* ========================= SECTIONS & CARDS ========================= */
-.section{ padding: 10px 10px; }
+.section{
+  padding: 70px 0;
+}
 .container .section{ padding-left: 0; padding-right: 0; }
 
 .service-grid{ display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 28px; }
@@ -303,6 +402,7 @@ a{ text-decoration: none; color: inherit; }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .section-bg::after{
     content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1;
@@ -320,7 +420,7 @@ a{ text-decoration: none; color: inherit; }
 /* ========================= MISSION SECTION ========================= */
 .mission-section{
     position: relative;
-    padding: 10px 10px;
+    padding: 70px 0px;
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
@@ -1166,3 +1266,167 @@ img{ display:block; max-width:100%; }
     width: 100%;
     max-width: 380px;
   }
+}
+/* ======================================================
+   GLOBAL MOBILE RESPONSIVE FIXES
+====================================================== */
+
+@media (max-width: 768px){
+
+  html,
+  body{
+    overflow-x: hidden;
+  }
+
+  .container{
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  section{
+    overflow: hidden;
+  }
+
+  /* Typography */
+  h1{
+    line-height: 1.05;
+  }
+
+  h2{
+    line-height: 1.15;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .navbar{
+    padding: 14px 18px;
+  }
+
+  .navbar.scrolled{
+    padding: 10px 18px;
+  }
+
+  .nav-logo-img{
+    width: 52px;
+    height: 52px;
+  }
+
+  .nav-company{
+    font-size: 1.35rem;
+  }
+
+  /* Hero */
+  #hero{
+    min-height: 100svh;
+    padding-top: 120px;
+  }
+
+  .hero-content{
+    width: 100%;
+  }
+
+  .hero-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Services */
+  .services-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card{
+    padding: 24px;
+  }
+
+  /* Mission */
+  .mission-inner{
+    flex-direction: column;
+  }
+
+  .mission-text{
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .mission-text .line{
+    margin: 18px auto 28px;
+  }
+
+  .mission-photo{
+    width: 100%;
+  }
+
+  /* About */
+  .about-wrapper{
+    flex-direction: column;
+  }
+
+  .about-image-card{
+    width: 100%;
+  }
+
+  /* Process */
+  .process-title{
+    font-size: 2rem;
+  }
+
+  .process-step h3{
+    font-size: 1.3rem;
+  }
+
+  /* Testimonials */
+  .testimonial-card{
+    min-width: 88%;
+  }
+
+  /* Before/After */
+  .ba-wrap{
+  grid-template-columns: 1fr;
+}
+
+  .ba-info{
+    width: 100%;
+  }
+
+  /* Packages */
+  .packages-grid{
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer/contact */
+  .footer-grid,
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+@media (max-width:768px){
+
+  .mission-photo img:hover{
+    transform: none;
+  }
+
+  .service-card:hover{
+    transform: none;
+  }
+
+  .about-image-card:hover{
+    transform: none;
+  }
+
+  .section-bg{
+    background-attachment: scroll;
+  }
+
+}
