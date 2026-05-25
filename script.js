@@ -6,7 +6,7 @@ const $$ = sel => Array.from(document.querySelectorAll(sel));
 
 /* -------------------- MOBILE NAV -------------------- */
 const navToggle = $("#navToggle");
-const navLinks = $(".nav-links");
+const navLinks = $("#mobileMenu");
 const navbar = $("#navbar");
 if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
