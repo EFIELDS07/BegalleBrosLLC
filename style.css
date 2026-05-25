@@ -1516,3 +1516,14 @@ img{ display:block; max-width:100%; }
 }
 
 }
+@media (max-width:768px){
+
+  .reveal,
+  .about-text,
+  .about-image-container,
+  .process-step{
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+}
