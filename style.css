@@ -1442,3 +1442,16 @@ img{ display:block; max-width:100%; }
   }
 
 }
+@media (max-width:768px){
+
+  .testimonial-card{
+    min-width: 78%;
+    max-width: 78%;
+  }
+
+  .testi-track{
+    gap: 20px;
+    animation: scrollTestimonials 10s linear infinite;
+  }
+
+}
