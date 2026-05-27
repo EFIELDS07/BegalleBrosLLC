@@ -1,5 +1,19 @@
 /* Begalle Bros — style.css (polished, responsive) */
 
+/* GLOBAL WEBSITE SCALE */
+
+html{
+    font-size: 85%;
+}
+
+/* MOBILE SCALE */
+@media (max-width:768px){
+
+    html{
+        font-size: 72%;
+    }
+
+}
 /* Global anti-aliasing (makes text look sharper & heavier) */
 
 body{
