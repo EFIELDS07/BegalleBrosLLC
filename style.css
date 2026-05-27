@@ -3,14 +3,14 @@
 /* GLOBAL WEBSITE SCALE */
 
 html{
-    font-size: 85%;
+    font-size: 90%;
 }
 
 /* MOBILE SCALE */
-@media (max-width:768px){
+@media (max-width:700px){
 
     html{
-        font-size: 72%;
+        font-size: 70%;
     }
 
 }
